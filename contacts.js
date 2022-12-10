@@ -3,15 +3,9 @@ const path = require("path");
 const { nanoid } = require("nanoid");
 
 const contactsPath = path.join(__dirname, "db", "contacts.json")
-// const contactsPath = path.resolve("db/contacts.json");
-// console.log(contactsPath);
-
-
 
 async function listContacts() {
 const list = await fs.readFile(contactsPath, "utf8");
-// console.log(JSON.parse(list));
-// console.log(list)
 return JSON.parse(list);
   }
   
@@ -45,7 +39,6 @@ return JSON.parse(list);
     return newContact;
   }
 
-  // Export all func
   module.exports = {
     listContacts,
     getContactById,
